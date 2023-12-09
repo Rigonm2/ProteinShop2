@@ -160,4 +160,20 @@ small {
 }
 .col-2 .offer2-img {
     padding: 50px;
+}.row-2 {
+    justify-content: space-between;
+    margin: 100px auto 50px;
+}
+
+select {
+
+    display: inline-block;
+    height: 30px;
+    width: 150px;
+    outline: none;
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px #eee;
+    background: #eee;
 }
