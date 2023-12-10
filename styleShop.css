@@ -368,4 +368,10 @@ col-3 p {
     position: relative;
     line-height: 60px;
     color: #555;
+}.header3 {
+    background: radial-gradient(#fff, #bc2a13);
+    /* (#ffd6d6,#CF9FFF) */
+}
+.header3 .row {
+    margin-top: 0;
 }
