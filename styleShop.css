@@ -375,3 +375,17 @@ col-3 p {
 .header3 .row {
     margin-top: 0;
 }
+.btn2 {
+    margin: 0 auto 65px;
+    position: relative;
+    display: inline-block;
+    background: #424444;
+    text-align: left;
+    color: #fff;
+    padding: 8px 30px;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+.btn2:hover {
+    background: #563434;
+}
