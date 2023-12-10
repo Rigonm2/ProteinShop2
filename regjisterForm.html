@@ -77,6 +77,19 @@
 
                         </form>
 
+                        <form id="regjisterForm">
+
+                            <label>Email:</label>
+                            <input type="text2" id="email2">
+                            <div class="error-message" id="emailError2"></div>
+
+                            <label>Password:</label>
+                            <input type="password" id="password2" placeholder="Password2">
+                            <div class="error-message" id="passwordError2"></div>
+                            <button type="button" onclick="FormaRegjister()" class="btn">Sign in</button>
+                            <a href="">Forgot password</a>
+
+                        </form>
 
 
                         
@@ -196,7 +209,30 @@
 
                 alert('Form submitted succesfully!');
             }
+            function FormaRegjister() {
+            
+            let emailInput = document.getElementById('email2');
+            let emailError = document.getElementById('emailError2');
 
+            let PasswordInput = document.getElementById('password2');
+            let PasswordError = document.getElementById('passwordError2');
+
+            
+            emailError.innerText = '';
+            PasswordError.innerText = '';
+
+
+            if (!emailRegex.test(emailInput.value)) {
+                emailError.innerText = 'invalid email';
+                return;
+            }
+            if (!PasswordRegex.test(PasswordInput.value)) {
+                PasswordError.innerText = 'invalid password';
+                return;
+            }
+
+            alert('Form submitted succesfully!');
+        }
             
         </script>
 
