@@ -232,3 +232,10 @@ select {
 ul {
     list-style-type: none;
 }
+.header3 {
+    background: radial-gradient(#fff, #bc2a13);
+    /* (#ffd6d6,#CF9FFF) */
+}
+.header3 .row {
+    margin-top: 0;
+}
