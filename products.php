@@ -17,15 +17,15 @@
 
         <div class="navabar">
             <div class="logo">
-                <a href="shopPage.html"><img src="Img/muscletech-logo-blk-checkout_280x.webp" width="125px" alt=""></a>
+                <a href="http://localhost:8008/ProteinShop2/shopPage.php"><img src="Img/muscletech-logo-blk-checkout_280x.webp" width="125px" alt=""></a>
             </div>
             <nav>
 
                 <ul id="Menuitems">
-                    <li><a href="shopPage.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="">About us</a></li>
-                    <li><a href="regjisterForm.html">Account</a></li>
+                <li><a href="http://localhost:8008/ProteinShop2/shopPage.php">Home</a></li>
+                        <li><a href="http://localhost:8008/ProteinShop2/products.php">Products</a></li>
+                        <li><a href="http://localhost:8008/ProteinShop2/aboutUs.php">About us</a></li>
+                        <li><a href="http://localhost:8008/ProteinShop2/regjisterForm.php">Account</a></li>
                 </ul>
             </nav>
             <a href=""><img src="Img/3144456.png" width="30px" height="30px"></a>
@@ -55,14 +55,14 @@
         
         <div class="row">
             <div class="col-4">
-                <a href="product1.html"><img src="Img/muscletech-masstech-extreme-vanilla-6lb_400x.webp"></a>
+                <a href="http://localhost:8008/ProteinShop2/product1.php"><img src="Img/muscletech-masstech-extreme-vanilla-6lb_400x.webp"></a>
                 <h4><b>MASS TECH</b></h4>
 
                 <p>59.99$</p>
             </div>
             <div class="col-4">
 
-                <a href="products2.html"><img src="Img/muscletech-nitrotech-chocolate-4lb.webp"></a>
+                <a href="http://localhost:8008/ProteinShop2/products2.php"><img src="Img/muscletech-nitrotech-chocolate-4lb.webp"></a>
                 <h4><b>WHEY PROTEIN</b></h4>
 
                 <p>39.99$</p>
@@ -128,9 +128,8 @@
                 <p>24.99$</p>
             </div>
             <div class="col-4">
-                <img src="Img/muscletech-euphoriq-boogieman-punch_480x480.webp" >
+                <a href="http://localhost:8008/ProteinShop2/productEuph.php"><img src="Img/euphtoriaCss.webp"></a>
                 <h4><b>EUPHORIA PRE-WORKOUT</b></h4>
-                
                 <p>33.99$</p>
             </div>
             <div class="col-4">
@@ -153,7 +152,7 @@
                 <p>67.99$</p>
             </div>
             <div class="col-4">
-                <a href="productCrea4.html"> <img src="Img/cell-tech-creatine.webp" ></a>
+                <a href="http://localhost:8008/ProteinShop2/productCrea4.php"> <img src="Img/cell-tech-creatine.webp" ></a>
                 <h4><b>CELL-TECH CREATINE</b></h4>
                 
                 <p>23.99$</p>
@@ -164,6 +163,103 @@
                 
                 <p>29.99$</p>
             </div>
+</div>
+</div>
+
+
+            <div class="slider">
+                <div class="imgbox">
+                    <img  class="sliderImg" src="Slides/creaFoto2.png">
+                </div>
+                
+                <button class="btn22" onclick="prev()"> < </button>
+                <button class="btn22" onclick="next()"> > </button>
+
+                <!-- butonin-->
+        
+            </div>
+            
+            
+            <div class="smallcontanier">
+        
+                <div class="row">
+            
+                    <div class="col-4">
+                        <a href="http://localhost:8008/ProteinShop2/productsISO.php"><img src="Img/chocoIso.webp"></a>
+                        <h4><b>ISO WHEY</b></h4>
+                        <p>49.99$</p>
+            
+                        <!--  <b>CREATINE PREMIUM PACK</b>   -->
+                    </div>
+                    <div class="col-4">
+                        <img src="Img/massmass.webp">
+                        <h4><b>MASS-TECH EXTREME 2000</b></h4>
+                        <p>54.99$</p>
+                    </div>
+                    <div class="col-4">
+                        <img src="Img/preStack.webp">
+                        <h4><b>ENFINITY STACK</b></h4>
+                        <p>77.99$</p>
+                    </div>
+                    <div class="col-4">
+                        <img src="Img/tribulus.webp">
+                        <h4><b>PLATINUM 100% TRIBULUS</b></h4>
+            
+                        <p>54.99$</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="Img/eaa+.webp">
+                            <h4><b>PLATINUM 100% EAA+</b></h4>
+            
+                            <p>23.99$</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="Img/creachews.webp">
+                            <h4><b>CREATINE CHEWS</b></h4>
+            
+                            <p>34.99$</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="Img/alphatest.webp">
+                            <h4><b>ALPHATEST THERMO</b></h4>
+            
+                            <p>34.99$</p>
+                        </div>
+            
+                        <!--  <b>100% GLUTAMINE</b>    -->
+                        <div class="col-4">
+                            <img src="Img/clearMuscle.webp">
+                            <h4><b>CLEAR MUSCLE</b></h4>
+            
+                            <p>44.99$</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="Img/plantProtein.webp">
+                                <h4><b>PLANT PROTEIN</b></h4>
+            
+                                <p>42.99$</p>
+                            </div>
+                            <div class="col-4">
+                                <img src="Img/burnIQ.webp">
+                                <h4><b>BURN IQ - 100 CT</b></h4>
+            
+                                <p>64.99$</p>
+                            </div>
+                            <div class="col-4">
+                                <img src="Img/stack.webp">
+                                <h4><b>GREEN GAINS BUNDLE</b></h4>
+            
+                                <p>81.23$</p>
+                            </div>
+                            <div class="col-4">
+                                <img src="Img/vitialig.webp">
+                                <h4><b>VITALIGENIX T10</b></h4>
+            
+                                <p>169.99$</p>
+                            </div>
+                       
 
             <!--opitimum-->
             <div class="col-4">
@@ -214,31 +310,14 @@
             <!--Dymatize--> 
 
 
-            <div class="col-4">
-                <img src="Img/dymatizeKo.jpg" >
-                <h4><b>Dymatize WHEY PROTEIN 2100gr</b></h4>
-                <p>62.99$</p>
-            </div>
-            <div class="col-4">
-                <img src="Img/dymatizewhey.jpg" >
-                <h4><b>Dymatize WHEY PROTEIN 907gr</b></h4>
-                <p>31.99$</p>
-            </div>
-            <div class="col-4">
-                <img src="Img/dymatize2.jpg" >
-                <h4><b>Dymatize MASS GAINER</b></h4>
-                <p>48.00$</p>
-            </div>
-            <div class="col-4">
-                <img src="Img/dymatizeIso2.jpg" >
-                <h4><b>Dymatize ISO-WHEY 100</b></h4>
-                <p>120.00$</p>
-            </div>
             
 
          </div>
         </div>
        </div>
+    </div>
+</div>
+
        <div class="page-btn">
             
         <span>1</span>
@@ -308,5 +387,56 @@
     
 </div>
 
+<script>
+    var i = 0;
+ var slider_img = document.querySelector(".sliderImg");
+    var images = ['creaFoto2.png','fotoja1.png','wheyFotoja3.png'];
+    
+
+    function changeImg(){
+        document.getElementById('sliderImg').src = images[i];
+
+        if(i<images.length-1){
+            i++;
+        }
+        else{
+            i=0;
+        }
+        document.addEventListener(onload,changeImg());
+
+       /*/ document.addEventListener(onload,changeImg)
+       function prev(){
+        if(i<=0){
+            i=images.length;
+            i--;
+            return setImg();
+        }
+  
+    function setImg(){
+        return slider_img.setAttribute('src','Slides/' + images[i]);
+        
+    }/*/
+    }
+
+    function prev(){
+        if(i<=0)
+            i=images.length;
+            i--;
+            return setImg();
+        
+    }
+    function next(){
+        if(i>= images.length -1)
+            i=-1;
+            i++;
+            return setImg();
+        
+    }
+    function setImg(){
+        return slider_img.setAttribute('src','Slides/' + images[i]);
+        
+    }
+
+</script>
 </body>
 </html>

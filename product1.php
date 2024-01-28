@@ -15,23 +15,24 @@
 
 <body>
 
-    <div class="header3">
+    <div class="header">
         <div class="container">
 
             <div class="navabar">
                 <div class="logo">
-                    <a href="shopPage.html"><img src="Img/muscletech-logo-blk-checkout_280x.webp" width="125px" alt=""></a>
+                    <a href="http://localhost:8008/ProteinShop2/shopPage.php"><img src="Img/muscletech-logo-blk-checkout_280x.webp" width="125px" alt=""></a>
                 </div>
                 <nav>
 
                     <ul id="Menuitems">
-                        <li><a href="shopPage.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="">About us</a></li>
-                        <li><a href="">Account</a></li>
+                    <li><a href="http://localhost:8008/ProteinShop2/shopPage.php">Home</a></li>
+                        <li><a href="http://localhost:8008/ProteinShop2/products.php">Products</a></li>
+                        <li><a href="http://localhost:8008/ProteinShop2/aboutUs.php">About us</a></li>
+                        <li><a href="http://localhost:8008/ProteinShop2/regjisterForm.php">Account</a></li>
                     </ul>
                 </nav>
                 <a href=""><img src="Img/3144456.png" width="30px" height="30px"></a>
+                
             </div>
 
         </div>
@@ -43,32 +44,29 @@
     <div class="small-contanier single-product">
         <div class="row">
             <div class="col-2">
-                <img src="Img/muscletech-nitrotech-chocolate-4lb.webp" width="100%">
+                <img src="Img/massTech2000.webp" width="100%">
             </div>
             <div class="col-2">
-                <h1>WHEY-PROTEIN</h1>
+                <h1>MASS-TECH EXTREME 2000</h1>
                 <h4><b>39.99$</b></h4>
                 <select>
                     <option>Select size</option>
-                    <option>900 gr</option>
-                    <option>1.8 kg</option>
+                    <option>1200 gr</option>
+                    <option>2.7 kg</option>
 
                 </select>
                 <select>
                     <option>Select flavor</option>
                     <option>Chocolate</option>
                     <option>Vanilla</option>
-                    <option>Strawberry</option>
-                    <option>Cookies & cream</option>
                 </select>
                 <br>
                 <br>
                 <h3>Product Details</h3>
                 <small>
-                    <p>Nitro-TechTM is our best-in-class scientifically engineered whey protein formula,
-                        enhanced with a researched form of creatine to support more lean muscle, more strength, and
-                        better performances.
-                        This is the original for a reason.</p>
+                    <p>MASS-TECH® EXTREME 2000 features whey protein, whey protein isolate 97%, whey protein isolate and
+                        hydrolyzed whey protein isolate, providing a rapidly absorbed, high biological value protein
+                        that your body can easily assimilate to build some seriously impressive muscle.</p>
                 </small>
 
                 <a href="" class="btn">Add to Cart </a>
@@ -77,14 +75,10 @@
         </div>
     </div>
 
-
-
-
-
-
     <!--  <b>SHATTER RIPPED</b>     -->
 
-   
+
+    
     <div class="smallcontanier">
         <h2 class="Secondtitle">Flavors</h2>
         <div class="boxes">
@@ -92,21 +86,16 @@
             <div class="row">
 
                 <div class="col-3">
-                    <img src="Img/whey-choco.webp">
+                    <img src="Img/massTech2000.webp">
                     <h4><b>CHOCOLATE</b></h4>
                 </div>
                 <div class="col-3">
-                    <img src="Img/whey-straw.webp">
-                    <h4><b>STRAWBERRY</b></h4>
+                    <img src="Img/massTech2000vani.webp">
+                    <h4><b>VANILLA</b></h4>
                 </div>
 
-                <div class="col-3">
-                    <img src="Img/whey-cookies.webp">
-                    <h4><b>COOKIES AND CREAM</b></h4>
-
-                </div>
-            
             </div>
+     
 
         </div>
     </div>
@@ -162,10 +151,9 @@
                     <p>52.99$</p>
                 </div>
                 <div class="col-4">
-                    <img src="Img/muscletech-nitrotech-ripped-chocolate_480x480.webp">
-                    <h4><b>RIPPED WHEY PROTEIN</b></h4>
-
-                    <p>54.99$</p>
+                    <a href="http://localhost:8008/ProteinShop2/productEuph.php"><img src="Img/euphtoriaCss.webp"></a>
+                    <h4><b>EUPHORIA PRE-WORKOUT</b></h4>
+                    <p>33.99$</p>
                 </div>
                 <div class="col-4">
                     <img src="Img/platinium-8-hour.webp">
@@ -174,10 +162,11 @@
                     <p>69.99$</p>
                 </div>
                 <div class="col-4">
-                    <a href="product1.html"><img src="Img/muscletech-masstech-extreme-vanilla-6lb_400x.webp"></a>
-                    <h4><b>MASS TECH</b></h4>
 
-                    <p>59.99$</p>
+                    <a href="http://localhost:8008/ProteinShop2/products2.php"><img src="Img/muscletech-nitrotech-chocolate-4lb.webp"></a>
+                    <h4><b>WHEY PROTEIN</b></h4>
+
+                    <p>39.99$</p>
                 </div>
 
 
@@ -187,11 +176,17 @@
     </div>
 
 
-
-
-
     </div>
 
+    </div>
+    <br>
+    
+    <div class="smallcontanier">
+        <a href="http://localhost:8008/ProteinShop2/products.php"
+        class="btn22">VIEW ALL PRODUCTS &#8594;</a>
+<br>
+<br>
+<br>
     </div>
     <!----------footer-------->
     <div class="footer">
@@ -232,7 +227,7 @@
         </div>
 
     </div>
-  
+   
 </body>
 
 </html>

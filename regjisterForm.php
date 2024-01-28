@@ -1,3 +1,37 @@
+<?php
+include_once 'User.php';
+include_once 'userRepository.php';
+
+if (isset($_POST['submitbtn'])) {
+   
+    $emri = $_POST['emri'];
+    $mbiemri = $_POST['mbiemri'];
+    $email = $_POST['email'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+
+    if($emri == "Rigon" && $mbiemri == "Mejzini" 
+    && $email == "rigon@gmail.com" && $username == "rigonAdmini"&& $password == "rigon123"){
+
+        header("location:Userat.php");
+    }
+    else{
+
+    $reg = new User($emri, $mbiemri, $email,$username,$password);
+
+    $userRepository = new userRepository();
+    $userRepository->insertStudent($reg);
+    
+    header("location:shopPage.php");
+    }
+}
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,10 +59,10 @@
                 <nav>
 
                     <ul id="Menuitems">
-                        <li><a href="shopPage.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="">About us</a></li>
-                        <li><a href="regjisterForm.html">Account</a></li>
+                    <li><a href="http://localhost:8008/ProteinShop2/shopPage.php">Home</a></li>
+                        <li><a href="http://localhost:8008/ProteinShop2/products.php">Products</a></li>
+                        <li><a href="http://localhost:8008/ProteinShop2/aboutUs.php">About us</a></li>
+                        <li><a href="http://localhost:8008/ProteinShop2/regjisterForm.php">Account</a></li>
                     </ul>
                 </nav>
                 <a href=""><img src="Img/3144456.png" width="30px" height="30px"></a>
@@ -39,7 +73,6 @@
 
     <!--------RegjisterForm------>
 
-    
     <div class="account-page">
         <div class="container">
             <div class="row">
@@ -56,25 +89,17 @@
                             <hr id="indi">
 
                         </div>
-                        <form id="loginForm">
-
-                            
-                            <input type="text" id="name" placeholder="Name">
-                            <div class="error-message" id="nameError"></div>
-
-                            
-                            <input type="text" id="surname" placeholder="Surname">
-                            <div class="error-message" id="surnameError"></div>
-
-                    
-                            <input type="text" id="email" placeholder="Email">
-                            <div class="error-message" id="emailError"></div>
-
                         
-                            <input type="password" id="password" placeholder="Password">
-                            <div class="error-message" id="passwordError"></div>
-                            <button type="button" onclick="FormaLogin()" class="btn">Sign up</button>
+                        <form id = "loginForm"action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">  
+                    
+                        <input type="text" id="emri" name ="emri" placeholder="Name">
+                        <input type="text" id="mbiemri" name ="mbiemri" placeholder="Surname">
+                        <input type="email" id="email" name ="email" placeholder="Email">
+                        <input type="text" id="username" name ="username" placeholder="Username">
+                        <input type="password" id="password" name ="password" placeholder="Password">
 
+                        <input type="submit" onclick="FormaLogin()" name="submitbtn" value="Submit" class="btn"> 
+                        <br>
                         </form>
 
                         <form id="regjisterForm">
@@ -84,21 +109,21 @@
                             <div class="error-message" id="emailError2"></div>
 
                             <label>Password:</label>
-                            <input type="password" id="password2" placeholder="Password2">
+                            <input type="password" id="password2">
                             <div class="error-message" id="passwordError2"></div>
-                            <button type="button" onclick="FormaRegjister()" class="btn">Sign in</button>
+                            <button type="submit" onclick="FormaRegjister()" class="btn">Sign in</button>
                             <a href="">Forgot password</a>
 
                         </form>
 
-
                         
                     </div>
+                   
 
                 </div>
             </div>
         </div>
-
+</div>
 
 
         <!----------footer-------->
@@ -138,8 +163,9 @@
                     </div>
                 </div>
             </div>
+            </div>
 
-        </div>
+        
         <!-----------js-------------->
 
         <script>
@@ -235,6 +261,8 @@
         }
             
         </script>
+
+       
 
 </body>
 

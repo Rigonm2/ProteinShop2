@@ -20,15 +20,15 @@
 
             <div class="navabar">
                 <div class="logo">
-                    <a href="shopPage.html"><img src="Img/muscletech-logo-blk-checkout_280x.webp" width="125px" alt=""></a>
+                    <a href="http://localhost:8008/ProteinShop2/shopPage.php"><img src="Img/muscletech-logo-blk-checkout_280x.webp" width="125px" alt=""></a>
                 </div>
                 <nav>
 
                     <ul id="Menuitems">
-                        <li><a href="shopPage.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="">About us</a></li>
-                        <li><a href="regjisterForm.html">Account</a></li>
+                    <li><a href="http://localhost:8008/ProteinShop2/shopPage.php">Home</a></li>
+                        <li><a href="http://localhost:8008/ProteinShop2/products.php">Products</a></li>
+                        <li><a href="http://localhost:8008/ProteinShop2/aboutUs.php">About us</a></li>
+                        <li><a href="http://localhost:8008/ProteinShop2/regjisterForm.php">Account</a></li>
                     </ul>
                 </nav>
                 <a href=""><img src="Img/3144456.png" width="30px" height="30px"></a>
@@ -174,7 +174,7 @@
                     <p>69.99$</p>
                 </div>
                 <div class="col-4">
-                    <a href="product1.html"><img src="Img/muscletech-masstech-extreme-vanilla-6lb_400x.webp"></a>
+                    <a href="http://localhost:8008/ProteinShop2/product1.php"><img src="Img/muscletech-masstech-extreme-vanilla-6lb_400x.webp"></a>
                     <h4><b>MASS TECH</b></h4>
 
                     <p>59.99$</p>
@@ -185,15 +185,13 @@
         </div>
     </div>
     </div>
-    </div>
+
+
+
+
 
     </div>
-    <div class="smallcontanier">
-        <a href="products.html"
-                        class="btn2">All products &#8594;</a>
-<br>
-<br>
-<br>
+
     </div>
     <!----------footer-------->
     <div class="footer">

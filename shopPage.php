@@ -20,15 +20,15 @@
 
             <div class="navabar">
                 <div class="logo">
-                    <a href="shopPage.html"><img src="Img/muscletech-logo-blk-checkout_280x.webp" width="125px" alt=""></a>
+                    <a href="http://localhost:8008/ProteinShop2/shopPage.php"><img src="Img/muscletech-logo-blk-checkout_280x.webp" width="125px" alt=""></a>
                 </div>
                 <nav>
 
                     <ul id="Menuitems">
-                        <li><a href="shopPage.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="">About us</a></li>
-                        <li><a href="regjisterForm.html">Account</a></li>
+                    <li><a href="http://localhost:8008/ProteinShop2/shopPage.php">Home</a></li>
+                        <li><a href="http://localhost:8008/ProteinShop2/products.php">Products</a></li>
+                        <li><a href="http://localhost:8008/ProteinShop2/aboutUs.php">About us</a></li>
+                        <li><a href="http://localhost:8008/ProteinShop2/regjisterForm.php">Account</a></li>
                     </ul>
                 </nav>
                 <a href=""><img src="Img/3144456.png" width="30px" height="30px"></a>
@@ -40,7 +40,7 @@
                     <h1 id="#plugins">RECOVER FASTER. <br>GO FURTHER.</h1>
                     <h2>Start with MASS-TECH® EXTREME 2000</h2>
 
-                    <a href="product1.html"
+                    <a href="http://localhost:8008/ProteinShop2/product1.php"
                         class="btn">Buy Now &#8594;</a>
 
                     <p><small>*Post workout protein supplement can support fast recovery.</small></p>
@@ -82,14 +82,14 @@
             <h2 class="title">Featured Products</h2>
             <div class="row">
                 <div class="col-4">
-                    <a href="product1.html"><img src="Img/muscletech-masstech-extreme-vanilla-6lb_400x.webp"></a>
+                    <a href="http://localhost:8008/ProteinShop2/product1.php"><img src="Img/muscletech-masstech-extreme-vanilla-6lb_400x.webp"></a>
                     <h4><b>MASS TECH</b></h4>
 
                     <p>59.99$</p>
                 </div>
                 <div class="col-4">
 
-                    <a href="products2.html"><img src="Img/muscletech-nitrotech-chocolate-4lb.webp"></a>
+                    <a href="http://localhost:8008/ProteinShop2/products2.php"><img src="Img/muscletech-nitrotech-chocolate-4lb.webp"></a>
                     <h4><b>WHEY PROTEIN</b></h4>
 
                     <p>39.99$</p>
@@ -150,7 +150,7 @@
                         <small>Nitro-TechTM is our best-in-class scientifically engineered whey protein formula,
                             enhanced with a researched form of creatine to support more lean muscle, more strength, and
                             better performances.This is the original for a reason.</small>
-                        <a href="products2.html" class="btn">Buy Now &#8594</a>
+                        <a href="http://localhost:8008/ProteinShop2/products2.php" class="btn">Buy Now &#8594</a>
 
                     </div>
                 </div>
@@ -175,9 +175,8 @@
             <p>24.99$</p>
         </div>
         <div class="col-4">
-            <img src="Img/muscletech-euphoriq-boogieman-punch_480x480.webp">
+            <a href="http://localhost:8008/ProteinShop2/productEuph.php"><img src="Img/euphtoriaCss.webp"></a>
             <h4><b>EUPHORIA PRE-WORKOUT</b></h4>
-
             <p>33.99$</p>
         </div>
         <div class="col-4">
@@ -259,13 +258,115 @@
                 carbohydrates that forces a powerful insulin spike post-workout. The powerful carbohydrates
                 trigger insulin output, enabling it to shuttle massive 10g creatine.</p>
             </small>
-            <a href= "productCrea4.html" class="btn">Buy Now &#8594</a>
+            <a href= "http://localhost:8008/ProteinShop2/productCrea4.php" class="btn">Buy Now &#8594</a>
 
         </div>
     </div>
 </div>
 </div>
 
+<div class="smallcontanier">
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-4">
+            <a href="http://localhost:8008/ProteinShop2/productsISO.php"><img src="Img/chocoIso.webp"></a>
+            <h4><b>ISO WHEY</b></h4>
+            <p>49.99$</p>
+
+            <!--  <b>CREATINE PREMIUM PACK</b>   -->
+        </div>
+        <div class="col-4">
+            <img src="Img/massmass.webp">
+            <h4><b>MASS-TECH EXTREME 2000</b></h4>
+            <p>54.99$</p>
+        </div>
+        <div class="col-4">
+            <img src="Img/preStack.webp">
+            <h4><b>ENFINITY STACK</b></h4>
+            <p>77.99$</p>
+        </div>
+        <div class="col-4">
+            <img src="Img/tribulus.webp">
+            <h4><b>PLATINUM 100% TRIBULUS</b></h4>
+
+            <p>54.99$</p>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="Img/eaa+.webp">
+                <h4><b>PLATINUM 100% EAA+</b></h4>
+
+                <p>23.99$</p>
+            </div>
+            <div class="col-4">
+                <img src="Img/creachews.webp">
+                <h4><b>CREATINE CHEWS</b></h4>
+
+                <p>34.99$</p>
+            </div>
+            <div class="col-4">
+                <img src="Img/alphatest.webp">
+                <h4><b>ALPHATEST THERMO</b></h4>
+
+                <p>34.99$</p>
+            </div>
+
+            <!--  <b>100% GLUTAMINE</b>    -->
+            <div class="col-4">
+                <img src="Img/clearMuscle.webp">
+                <h4><b>CLEAR MUSCLE</b></h4>
+
+                <p>44.99$</p>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img src="Img/plantProtein.webp">
+                    <h4><b>PLANT PROTEIN</b></h4>
+
+                    <p>42.99$</p>
+                </div>
+                <div class="col-4">
+                    <img src="Img/burnIQ.webp">
+                    <h4><b>BURN IQ - 100 CT</b></h4>
+
+                    <p>64.99$</p>
+                </div>
+                <div class="col-4">
+                    <img src="Img/stack.webp">
+                    <h4><b>GREEN GAINS BUNDLE</b></h4>
+
+                    <p>81.23$</p>
+                </div>
+                <div class="col-4">
+                    <img src="Img/vitialig.webp">
+                    <h4><b>VITALIGENIX T10</b></h4>
+
+                    <p>169.99$</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-------ofertat ------>
+<div class="offer4">
+    <div class="smallcontanier">
+        <div class="row">
+            <div class="col-2">
+                <img src="Img/euphtoriaCss.webp" class="offer-img">
+            </div>
+            <div class="col-2">
+                <p>Exclusively Available on MuscleTech</p>
+                <h1>EUPHORIA PRE-WORKOUT</h1>
+                <small>EuphoriQ is a pre-workout that's changing energy and focus forever. This first-of-its-kind supplement delivers clean, smooth energy, cognition and increased focus as well. And it's fuelled by the revolutionary ingredient, enfinity.</small>
+                <a href="http://localhost:8008/ProteinShop2/productEuph.php" class="btn">Buy Now &#8594</a>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 
    
@@ -273,8 +374,8 @@
     <!-----------brendet-------->
     <div class="brands">
         <div class="smallcontanier">
-            <a href="products.html"
-                        class="btn2">All products &#8594;</a>
+            <a href="http://localhost:8008/ProteinShop2/products.php"
+        class="btn22">VIEW ALL PRODUCTS &#8594;</a>
 <br>
 <br>
             <div class="row">
@@ -336,4 +437,7 @@
 
     </body>
     </html>
-            
+        
+
+    db = databaseCon();
+    db -> startConn();

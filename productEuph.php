@@ -15,20 +15,20 @@
 
 <body>
 
-    <div class="header">
+    <div class="headerNew">
         <div class="container">
 
             <div class="navabar">
                 <div class="logo">
-                    <a href="rigon.html"><img src="Img/muscletech-logo-blk-checkout_280x.webp" width="125px" alt=""></a>
+                    <a href="http://localhost:8008/ProteinShop2/shopPage.php"><img src="Img/muscletech-logo-blk-checkout_280x.webp" width="125px" alt=""></a>
                 </div>
                 <nav>
 
                     <ul id="Menuitems">
-                        <li><a href="shopPage.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="">About us</a></li>
-                        <li><a href="regjisterForm.html">Account</a></li>
+                    <li><a href="http://localhost:8008/ProteinShop2/shopPage.php">Home</a></li>
+                        <li><a href="http://localhost:8008/ProteinShop2/products.php">Products</a></li>
+                        <li><a href="http://localhost:8008/ProteinShop2/aboutUs.php">About us</a></li>
+                        <li><a href="http://localhost:8008/ProteinShop2/regjisterForm.php">Account</a></li>
                     </ul>
                 </nav>
                 <a href=""><img src="Img/3144456.png" width="30px" height="30px"></a>
@@ -44,29 +44,24 @@
     <div class="small-contanier single-product">
         <div class="row">
             <div class="col-2">
-                <img src="Img/massTech2000.webp" width="100%">
+                <img src="Img/euphtoriaCss.webp" width="100%">
             </div>
             <div class="col-2">
-                <h1>MASS-TECH EXTREME 2000</h1>
-                <h4><b>39.99$</b></h4>
-                <select>
-                    <option>Select size</option>
-                    <option>1200 gr</option>
-                    <option>2.7 kg</option>
-
-                </select>
+                <h1>EUPHORIA PRE-WORKOUT</h1>
+                <h4><b>33.99$</b></h4>
                 <select>
                     <option>Select flavor</option>
-                    <option>Chocolate</option>
-                    <option>Vanilla</option>
+                    <option>Boogieman Punch</option>
+                    <option>Yuzu Lemonade</option>
+                    <option>Watermelon Candy</option>
+                    <option>Icy Snow Cone</option>
                 </select>
+              
                 <br>
                 <br>
                 <h3>Product Details</h3>
                 <small>
-                    <p>MASS-TECH® EXTREME 2000 features whey protein, whey protein isolate 97%, whey protein isolate and
-                        hydrolyzed whey protein isolate, providing a rapidly absorbed, high biological value protein
-                        that your body can easily assimilate to build some seriously impressive muscle.</p>
+                    <p>EuphoriQ is a pre-workout that's changing energy and focus forever. This first-of-its-kind supplement delivers clean, smooth energy, cognition, and increased focus as well as an unparalleled energy and sensory experience. And it's fuelled by the revolutionary ingredient, enfinity.</p>
                 </small>
 
                 <a href="" class="btn">Add to Cart </a>
@@ -86,12 +81,20 @@
             <div class="row">
 
                 <div class="col-3">
-                    <img src="Img/massTech2000.webp">
-                    <h4><b>CHOCOLATE</b></h4>
+                    <img src="Img/lemonade.webp">
+                    <h4><b>YUZU LEMONADE</b></h4>
                 </div>
                 <div class="col-3">
-                    <img src="Img/massTech2000vani.webp">
-                    <h4><b>VANILLA</b></h4>
+                    <img src="Img/watermelon.webp">
+                    <h4><b>WATERMELON CANDY</b></h4>
+                </div>
+                <div class="col-3">
+                    <img src="Img/euphtoriaCss.webp">
+                    <h4><b>BOOGIEMAN PUNCH</b></h4>
+                </div>
+                <div class="col-3">
+                    <img src="Img/icysnow.webp">
+                    <h4><b>ICY SNOW CONE</b></h4>
                 </div>
 
             </div>
@@ -145,16 +148,16 @@
         <div class="boxes">
             <div class="row">
                 <div class="col-4">
-                    <img src="Img/muscletech-100-mass-gainer-chocolate_1024x1024.webp">
-                    <h4><b>MASS GAINER</b></h4>
-
-                    <p>52.99$</p>
+                    <a href="http://localhost:8008/ProteinShop2/product1.php"><img src="Img/muscletech-masstech-extreme-vanilla-6lb_400x.webp"></a>
+                    <h4><b>MASS TECH</b></h4>
+    
+                    <p>59.99$</p>
                 </div>
                 <div class="col-4">
-                    <img src="Img/muscletech-nitrotech-ripped-chocolate_480x480.webp">
-                    <h4><b>RIPPED WHEY PROTEIN</b></h4>
-
-                    <p>54.99$</p>
+                    <a href="http://localhost:8008/ProteinShop2/productCrea4.php"> <img src="Img/cell-tech-creatine.webp" ></a>
+                    <h4><b>CELL-TECH CREATINE</b></h4>
+                    
+                    <p>23.99$</p>
                 </div>
                 <div class="col-4">
                     <img src="Img/platinium-8-hour.webp">
@@ -164,7 +167,7 @@
                 </div>
                 <div class="col-4">
 
-                    <a href="products2.html"><img src="Img/muscletech-nitrotech-chocolate-4lb.webp"></a>
+                    <a href="http://localhost:8008/ProteinShop2/products2.php"><img src="Img/muscletech-nitrotech-chocolate-4lb.webp"></a>
                     <h4><b>WHEY PROTEIN</b></h4>
 
                     <p>39.99$</p>
@@ -183,8 +186,8 @@
     <br>
     
     <div class="smallcontanier">
-        <a href="products.html"
-                        class="btn2">All products &#8594;</a>
+        <a href="http://localhost:8008/ProteinShop2/products.php"
+        class="btn22">VIEW ALL PRODUCTS &#8594;</a>
 <br>
 <br>
 <br>
