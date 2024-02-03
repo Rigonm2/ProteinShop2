@@ -3,6 +3,12 @@
 
     class userRepository{
         private $connection;
+        private $db;
+
+        public function __construct1($db)
+        {
+            $this->db = $db;
+        }
 
         public function __construct()
         {
@@ -10,7 +16,7 @@
             $this->connection = $conn->startConnection();
         }
 
-        public function insertStudent($reg){
+        public function insertUser($reg){
             $conn = $this->connection;
 
             $emri = $reg->getEmri();
@@ -27,8 +33,19 @@
 
             echo "<script>alert('U shtua me sukses!')</script>";
         }
+            public function getEmail($email){
+            $conn = $this->connection;
 
-        public function getAllStudents(){
+            $sql = "SELECT * FROM form WHERE Email = $email";
+            $statement = $conn->query($sql);
+
+            $log = $statement->fetch();
+            return $log;
+        }
+        
+        
+
+        public function getAllUsers(){
             $conn = $this->connection;
 
             $sql = "SELECT * FROM form";
@@ -38,10 +55,44 @@
             return $reg;
         }
 
+        function UsernameTaken($username){
+            try{
+            $conn = $this->connection;
+
+            $stmt = $this->$conn->prepare("SELECT * FROM form WHERE Username = ?");
+            $stmt->bind_param("s",$username);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $stmt ->close();
+            }catch (PDOException $e) {
+                echo "Error: " . $e->getMessage();
+            }
+            return $result->num_rows >0;
+        }
+        function login($email,$password){
+            $conn = $this->connection;
+            $stmt = $this -> $conn->prepare("SELECT * FROM form WHERE email = $email");
+            $stmt->bind_param("s",$email);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            if($result ->num_rows>0){
+            $row = $result->fetch_assoc();
+            $hashedPassowrd = $row['Password'];
+            
+            if(password_verify($password,$hashedPassowrd)){
+                session_start();
+                $_SESSION["User"] = true;
+                return true;
+            }
+            }
+            return false;
+
+        }
+
      
 
 
-         public function editStudent($emri, $mbiemri, $emaili, $username, $password, $id) {
+         public function editUsers($emri, $mbiemri, $emaili, $username, $password, $id) {
             try {
                 $conn = $this->connection;
                 $sql = "UPDATE form SET Emri=?, Mbiemri=?, Email=?, Username=?, Password=? WHERE Id=?";
@@ -53,7 +104,7 @@
             }
         }
 
-        function deleteStudent($id){
+        function deleteUsers($id){
             $conn = $this->connection;
 
             $sql = "DELETE FROM form WHERE Id=?";
@@ -63,7 +114,7 @@
         }
 
         
-        function getStudentById($id){
+        function getUserById($id){
             $conn = $this->connection;
 
             $sql = "SELECT * FROM form WHERE Id=?";
@@ -75,6 +126,13 @@
             return $reg;
         }
 
+        function admini($Email,$username,$Password){
+            $is = false;
+            if( $Email == "rigon@gmail.com" && $username == "rigonAdmini"&& $Password == "rigon123"){
+                $is = true;
+            }
+            return $is;
+        }
     }
 
 ?>

@@ -1,3 +1,11 @@
+<?php 
+    session_start();
+    if(!isset($_SESSION["User"])){
+        header("location:regjisterForm.php");
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -259,6 +267,24 @@
             
                                 <p>169.99$</p>
                             </div>
+                            <?php 
+                  include_once "proteinRepository.php";
+                  $strep = new proteinRepository();
+                  $regs = $strep -> getAllProducts();
+               
+                  foreach($regs as $reg){
+                    $src = $reg['src'];
+                    $Name =$reg['Name'];
+                    $Price =$reg['Price'];
+                  
+                ?>   
+                <div class="col-4">
+                    <img src="<?php echo $src ?>">
+                    <h4><b><?php echo $Name ?></b></h4>
+
+                    <p><?php echo $Price ?></p>
+                </div>
+                <?php }?>
                        
 
             <!--opitimum-->
@@ -305,6 +331,62 @@
                 <h4><b>Optimum GLUTAMINE</b></h4>
                 <p>30.99$</p>
             </div>
+            <?php
+   include "userRepository.php";
+   
+   $strep = new userRepository();
+   $regs = $strep -> getAllUsers();
+
+   foreach($regs as $reg){
+    $Emri = $reg['Emri'];
+    $Mbiemri = $reg['Mbiemri'];
+    $Email = $reg['Email'];
+    $username =$reg['Username'];
+    $Password = $reg['Password'];
+    
+   
+   }
+   $admin = $strep -> admini($Email,$username,$Password)
+    ?>
+            <?php 
+                  include_once "proteinRepository.php";
+                
+                  $strep = new proteinRepository();
+                  $regs = $strep -> getAllProducts();
+               
+                  foreach($regs as $reg){
+                    $src = $reg['src'];
+                    $Name =$reg['Name'];
+                    $Price =$reg['Price'];
+                  
+                ?>   
+                <div class="col-4">
+                    <img src="<?php echo $src ?>"> 
+                    <h4><b><?php echo $Name ?></b></h4>
+
+                    <p><?php echo $Price ?></p>
+                    <br>
+                    <?php if($admin){
+                    echo "<a href='editProtein.php?id=$reg[Id]'>Edit</a> ";
+                    echo "      :     ";
+                    echo "<a href='deleteProtein.php?id=$reg[Id]'>Delete</a>";
+                     }?>
+                </div>
+                <?php }?>
+              
+<?php if($admin){
+?>
+<a href="addProduct.php"
+        class="btn22">Add product</a>
+
+        <br>
+        
+        <a href="Pro.php"
+        class="btn22">Dashboard</a>
+
+        <?php } ?>
+ <br>
+<br>
 
 
             <!--Dymatize--> 

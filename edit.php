@@ -4,7 +4,7 @@ include 'userRepository.php';
 $id = $_GET['id']; // Id
 
 $strep = new userRepository();
-$reg = $strep->getStudentById($id);
+$reg = $strep->getUserById($id);
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@ $reg = $strep->getStudentById($id);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <title>All Products</title>
+    <title>Edit</title>
     <link rel="stylesheet" href="styleShop.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -65,7 +65,7 @@ if (isset($_POST['editBtn'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $strep->editStudent($emri, $mbiemri, $email, $username, $password, $id);
+    $strep->editUsers($emri, $mbiemri, $email, $username, $password, $id);
 
     header("location:dashboard.php");
 }

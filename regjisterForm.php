@@ -1,35 +1,11 @@
-<?php
-include_once 'User.php';
-include_once 'userRepository.php';
-
-if (isset($_POST['submitbtn'])) {
-   
-    $emri = $_POST['emri'];
-    $mbiemri = $_POST['mbiemri'];
-    $email = $_POST['email'];
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-
-    if($emri == "Rigon" && $mbiemri == "Mejzini" 
-    && $email == "rigon@gmail.com" && $username == "rigonAdmini"&& $password == "rigon123"){
-
-        header("location:Userat.php");
+<?php 
+    session_start();
+    if(isset($_SESSION["User"])){
+        header("location:shopPage.php");
     }
-    else{
-
-    $reg = new User($emri, $mbiemri, $email,$username,$password);
-
-    $userRepository = new userRepository();
-    $userRepository->insertStudent($reg);
-    
-    header("location:shopPage.php");
-    }
-}
-
-
 
 ?>
+
 
 
 <!DOCTYPE html>
@@ -69,6 +45,7 @@ if (isset($_POST['submitbtn'])) {
             </div>
 
         </div>
+        
     </div>
 
     <!--------RegjisterForm------>
@@ -82,6 +59,8 @@ if (isset($_POST['submitbtn'])) {
                 </div>
                 <div class="col-2">
                     <div class="form-container">
+
+
                         <div class="form-btn">
 
                             <span onclick="login()">Sign in</span>
@@ -89,29 +68,128 @@ if (isset($_POST['submitbtn'])) {
                             <hr id="indi">
 
                         </div>
+                        <br>
+                        <?php
+include_once 'User.php';
+include_once 'userRepository.php';
+include_once 'DatabaseConnection.php';
+//ktu po du me bo qe nese ekziston qaj username ose qajo email mos me lon me shkru apet e mir ardh si alert qe that 
+// username exist po e provova diqka spom bon 
+
+if (isset($_POST['submitbtn'])) {
+   
+    $emri = $_POST['emri'];
+    $mbiemri = $_POST['mbiemri'];
+    $email = $_POST['email'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // $sql = mysqli_query($conn, "SELECT FROM form WHERE Email = $email");
+    // $stmt = $conn->prepare($sql); 
+    // $stmt->bind_param("i", $email);
+    // $stmt->execute();
+    // $result = $stmt->get_result(); 
+    // $query = $result->fetch_assoc();
+
+    $strep = new userRepository();
+
+
+   $erorrs = array();
+            if(empty($emri) OR empty($mbiemri) OR empty($email) OR empty($username) OR empty($password)){
+               array_push($erorrs,"All fields required!!");
+               echo "<b>All fields required!!</b>";
+            }
+//             if(mysqli_num_rows($result)>0){
+//             echo "This email has already been registered";
+// }        
+            // if($strep->UsernameTaken($username)){
+            //     echo "Username already exists. Please choose a different one.";
+            //     die();
+            // }
+            if(strlen($password)<8){
+                array_push($erorrs,"Password should be longer!!");
+                echo"<br><b>Password should be longer!!</b>";
+            }
+            if(count($erorrs)>0){
+                foreach($erorrs as $error){
+                    echo "<div class = 'alert alert-danger'></div>";
+                }
+            }else{
+
+
+    // $admin = $strep -> admini($emri,$mbiemri,$email,$username,$password);
+    // if($admin){
+    //     header("location:Userat.php");
+         
+            
+    $reg = new User($emri, $mbiemri, $email,$username,$password);
+
+    $userRepository = new userRepository();
+// }
+// else{
+    $reg = new User($emri, $mbiemri, $email,$username,$password);
+    $userRepository = new userRepository();
+    $userRepository->insertUser($reg);
+
+    session_start();
+    $_SESSION["User"] = true;
+    header("location:shopPage.php");
+    die();
+
+}
+}
+//}
+
+?>
+
+
+<?php 
+include_once 'User.php';
+include_once 'userRepository.php';
+include_once 'DatabaseConnection.php';
+
+if(isset($_POST["loginBtn"])){
+    $strep = new userRepository();
+
+    $em = $_POST['Emaill'];
+    $pass = $_POST['Passwordd'];
+
+    $dbConn = DatabaseConnection::getinstance();
+    
+    if($strep->login($em,$pass)){
+        header("location:shopPage.php");
+    }else{
+        echo "Wrong email or password";
+    }
+    $dbConn ->closeConnection();
+   
+
+}
+
+?>
                         
                         <form id = "loginForm"action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">  
                     
                         <input type="text" id="emri" name ="emri" placeholder="Name">
                         <input type="text" id="mbiemri" name ="mbiemri" placeholder="Surname">
-                        <input type="email" id="email" name ="email" placeholder="Email">
+                        <input type="email" id="email" name ="email" placeholder="Email">      
                         <input type="text" id="username" name ="username" placeholder="Username">
                         <input type="password" id="password" name ="password" placeholder="Password">
-
-                        <input type="submit" onclick="FormaLogin()" name="submitbtn" value="Submit" class="btn"> 
+                       
+                        <input type="submit"  name="submitbtn" value="Submit" class="btn">
+                            
                         <br>
                         </form>
+                        
 
-                        <form id="regjisterForm">
+                        <form id="regjisterForm" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
 
-                            <label>Email:</label>
-                            <input type="text2" id="email2">
-                            <div class="error-message" id="emailError2"></div>
+                            <label>Email</label>
+                            <input type="text2" id="email" name ="Emaill" placeholder="Emaill">
 
-                            <label>Password:</label>
-                            <input type="password" id="password2">
-                            <div class="error-message" id="passwordError2"></div>
-                            <button type="submit" onclick="FormaRegjister()" class="btn">Sign in</button>
+                            <label>Password</label>
+                            <input type="password" id="password" name ="Passwordd" placeholder="Passwordd">
+                            <input type="submit"  name="loginBtn" value="Submit" class="btn"> 
                             <a href="">Forgot password</a>
 
                         </form>

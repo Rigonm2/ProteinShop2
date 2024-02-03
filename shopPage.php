@@ -1,3 +1,11 @@
+<?php 
+    session_start();
+    if(!isset($_SESSION["User"])){
+        header("location:regjisterForm.php");
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,11 +17,27 @@
     <link rel="stylesheet" href="styleShop.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+
 </head>
 
 <body>
+    <?php
+   include "userRepository.php";
+   
+   $strep = new userRepository();
+   $regs = $strep -> getAllUsers();
+
+   foreach($regs as $reg){
+    $Emri = $reg['Emri'];
+    $Mbiemri = $reg['Mbiemri'];
+    $Email = $reg['Email'];
+    $username =$reg['Username'];
+    $Password = $reg['Password'];
+    
+   
+   }
+   $admin = $strep -> admini($Email,$username,$Password)
+    ?>
 
     <div class="header">
         <div class="container">
@@ -24,15 +48,19 @@
                 </div>
                 <nav>
 
-                    <ul id="Menuitems">
+                    <ul id="Menuitems">                     
                     <li><a href="http://localhost:8008/ProteinShop2/shopPage.php">Home</a></li>
                         <li><a href="http://localhost:8008/ProteinShop2/products.php">Products</a></li>
                         <li><a href="http://localhost:8008/ProteinShop2/aboutUs.php">About us</a></li>
                         <li><a href="http://localhost:8008/ProteinShop2/regjisterForm.php">Account</a></li>
+                       
+                    </ul>
+                    <ul class="MMenu">
+                    <li><img src="Img/Gazi.png" width="25px" height="25px"></li>
+                    <li><b><h3 ><?php echo $username ?></h3></b></li>
                     </ul>
                 </nav>
-                <a href=""><img src="Img/3144456.png" width="30px" height="30px"></a>
-                <img src="Img/menu2.png" class="menu-icon">
+              
             </div>
 
             <div class="row">
@@ -344,7 +372,47 @@
 
                     <p>169.99$</p>
                 </div>
+                <?php 
+                  include_once "proteinRepository.php";
+                
+                  $strep = new proteinRepository();
+                  $regs = $strep -> getAllProducts();
+               
+                  foreach($regs as $reg){
+                    $src = $reg['src'];
+                    $Name =$reg['Name'];
+                    $Price =$reg['Price'];
+                  
+                ?>   
+                <div class="col-4">
+                    <img src="<?php echo $src ?>"> 
+                    <h4><b><?php echo $Name ?></b></h4>
+
+                    <p><?php echo $Price ?></p>
+                    <br>
+                    <?php if($admin){
+                    echo "<a href='editProtein.php?id=$reg[Id]'>Edit</a> ";
+                    echo "      :     ";
+                    echo "<a href='deleteProtein.php?id=$reg[Id]'>Delete</a>";
+                     }?>
+                </div>
+                <?php }?>
             </div>
+            <br>
+<br>
+<?php if($admin){
+?>
+<a href="addProduct.php"
+        class="btn22">Add product</a>
+
+        <br>
+        
+        <a href="Pro.php"
+        class="btn22">Dashboard</a>
+
+        <?php } ?>
+ <br>
+<br>
         </div>
     </div>
 </div>
@@ -377,6 +445,10 @@
             <a href="http://localhost:8008/ProteinShop2/products.php"
         class="btn22">VIEW ALL PRODUCTS &#8594;</a>
 <br>
+<br>
+<a href="logout.php"
+        class="btn">Log out</a>
+ <br>
 <br>
             <div class="row">
                 <div class="col-5">
@@ -439,5 +511,3 @@
     </html>
         
 
-    db = databaseCon();
-    db -> startConn();

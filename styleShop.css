@@ -11,6 +11,11 @@ body {
     align-items: center;
     padding: 20px;
 }
+.navaRab {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
 nav {
     flex: 1;
     text-align: right;
@@ -31,7 +36,7 @@ p {
     color: #010101;
 }
 .container {
-    max-width: 1300px;
+    max-width: 1455px;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
@@ -615,6 +620,22 @@ form a {
     margin-top: 8px;
     transform: translateX(100px);
     transition: transform 0.5s;
+}
+.form_error span {
+    width: 80%;
+    height: 35px;
+    margin: 3px 10%;
+    font-size: 1.1em;
+    color: #D83D5A;
+  }
+  .form_error input {
+    border: 1px solid #D83D5A;
+  }
+  .con{
+    max-width: 600px;
+    margin:0 auto;
+    padding:50px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .app-logo {

@@ -1,6 +1,9 @@
 <?php
 class DatabaseConnection{
    
+    private static $instance = null;
+    private $conn;
+
     private $host = "localhost";
     private $username = "userRigon";
     private $password = "11112222";
@@ -22,6 +25,22 @@ function startConnection(){
         return null;
     }
 }
+ public static function getInstance()
+{
+    if (self::$instance === null) {
+        self::$instance = new self();
+    }
+    return self::$instance;
+}
+public function getConnection()
+{
+    return $this->conn;
+}
+public function closeConnection()
+    {
+        $this->conn->close();
+    }
+
 
 }
 

@@ -1,4 +1,10 @@
+<?php 
+    session_start();
+    if(!isset($_SESSION["User"])){
+        header("location:regjisterForm.php");
+    }
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 

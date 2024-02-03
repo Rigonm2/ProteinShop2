@@ -27,28 +27,34 @@
 
              $userRepository = new userRepository();
 
-             $users = $userRepository->getAllStudents();
+             $users = $userRepository->getAllUsers();
+             $strep = new userRepository();
+                $regs = $strep -> getAllUsers();
 
-             foreach($users as $user){
-                echo 
-                "
-                <tr>
-                     <td>$user[Id]</td>
-                     <td>$user[Emri]</td>
-                     <td>$user[Mbiemri] </td>
-                     <td>$user[Email] </td>
-                     <td>$user[Username] </td>
-                     <td>$user[Password] </td>
-                     <td><a href='edit.php?id=$user[Id]'>Edit</a> </td>
-                     <td><a href='delete.php?id=$user[Id]'>Delete</a></td>
-                     
-                </tr>
-                ";
-             }
+                foreach($users as $user){
+                    echo 
+                    "
+                    <tr>
+                         <td>$user[Id]</td>
+                         <td>$user[Emri]</td>
+                         <td>$user[Mbiemri] </td>
+                         <td>$user[Email] </td>
+                         <td>$user[Username] </td>
+                         <td>$user[Password] </td>
+                         <td><a href='edit.php?id=$user[Id]'>Edit</a> </td>
+                         <td><a href='delete.php?id=$user[Id]'>Delete</a></td>
+                         
+                    </tr>
+                    ";
+                 }
+    
+                 
+                 
+                 ?>
 
              
              
-             ?>
+            
     </table>
 </body>
 </html>
